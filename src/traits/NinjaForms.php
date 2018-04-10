@@ -2,6 +2,8 @@
 
 namespace Maneuver\WpTestSuite\Traits;
 
+use Faker\Factory as Faker;
+
 trait NinjaForms {
 
   public function getForm($form_id) {
@@ -28,7 +30,7 @@ trait NinjaForms {
 
     $fields = $this->getFields($form_id);
     $values = [];
-    $faker = Faker\Factory::create();
+    $faker = Faker::create();
 
     foreach ($fields as $field) {
       $id = $field->get_setting('id');
