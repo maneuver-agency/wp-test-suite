@@ -1,0 +1,28 @@
+{
+    "name": "maneuver/wp-test-suite",
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "^6.0",
+        "dmore/chrome-mink-driver": "^2.6",
+        "fzaninotto/faker": "^1.7"
+    },
+    "authors": [
+        {
+            "name": "David De Coninck",
+            "email": "david@maneuver.be"
+        }
+    ],
+    "scripts": {
+        "copy-files": "Maneuver\\WpTestSuite\\Lib::copyFiles"
+    },
+    "extra": {
+        "copy-file": {
+            "src/files/": "../../../"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Maneuver\\WpTestSuite\\": "./src"
+        }
+    }
+}
